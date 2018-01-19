@@ -1,10 +1,10 @@
-import { app, BrowserWindow } from 'electron';
-import * as path from 'path';
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
 
-let mainWin: Electron.BrowserWindow | null;
+let mainWin;
 
 function createWin() {
-    mainWin = new BrowserWindow({
+    var mainWin = new BrowserWindow({
         width: 660,
         height: 400,
         minHeight: 350,
@@ -12,24 +12,21 @@ function createWin() {
         title: '你猜',
         show: false,
     });
-    const webContent = mainWin.webContents;
 
-    // mainWin.once('ready-to-show', () => {
-    //     mainWin.show();
-    // });
+    mainWin.once('ready-to-show', () => {
+        mainWin.show();
+    });
     if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {
-        mainWin.loadURL('http://127.0.0.1:4200');
+        mainWin.loadURL('http://localhost:3000');
         mainWin.webContents.openDevTools();
     } else {
-        mainWin.loadURL(`file://${path.resolve(__dirname, './build/index.html')}`);
+        mainWin.loadURL(`file://${path.resolve(__dirname, '../build/index.html')}`);
     }
 
     mainWin.on('closed', () => {
         mainWin = null;
     });
 }
-
-app.on('ready', createWin);
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
@@ -42,3 +39,5 @@ app.on('activate', () => {
         createWin();
     }
 });
+
+app.on('ready', createWin);

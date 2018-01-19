@@ -9,7 +9,6 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
@@ -122,12 +121,6 @@ module.exports = {
         loader: require.resolve('source-map-loader'),
         enforce: 'pre',
         include: paths.appSrc,
-      },
-      {
-        test: /\.less$/,
-        use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-        })
       },
       {
         // "oneOf" will traverse all following loaders until one will
