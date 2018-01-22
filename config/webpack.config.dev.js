@@ -168,6 +168,9 @@ module.exports = {
                 },
               },
               {
+                loader: require.resolve('less-loader'),
+              },
+              {
                 loader: require.resolve('postcss-loader'),
                 options: {
                   // Necessary for external CSS imports to work
@@ -199,7 +202,7 @@ module.exports = {
             // it's runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.js$/, /\.html$/, /\.json$/],
+            exclude: [/\.js$/, /\.html$/, /\.json$/, /\.less$/],
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',

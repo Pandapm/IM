@@ -1,28 +1,25 @@
-.App {
-  text-align: center;
+.xm-wrapper {
+    position: relative;
+    width: 100vw; 
+    height: 100vh;
+    background: rgb(42, 48, 62);
+
+    .xm-wrapper-inner {
+        position: relative;
+        padding: 30px 40px;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        font-size: 14px;
+
+        #xm-content {
+            .xm-wiki {
+                width: 100px;
+                height: 36px;
+                background: rgb(134, 249, 205);
+                box-shadow: 0 0 0 2px rgba(0,0,0,.3);
+            }
+        }
+    }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
