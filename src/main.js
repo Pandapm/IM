@@ -5,9 +5,9 @@ let mainWin;
 
 function createWin() {
     var mainWin = new BrowserWindow({
-        width: 660,
-        height: 400,
-        minHeight: 350,
+        width: 800,
+        height: 600,
+        minHeight: 450,
         minWidth: 600,
         title: '你猜',
         show: false,

@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 .xm-wrapper {
     position: relative;
     width: 100vw; 
@@ -17,9 +19,36 @@
                 width: 100px;
                 height: 36px;
                 background: rgb(134, 249, 205);
-                box-shadow: 0 0 0 2px rgba(0,0,0,.3);
+                animation: wiki-fade infinite 4s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+                    animation: 0;
+                }
+            }
+
+            .xm-logo {
+                #xm-logo-font {
+                    display: inline-block;
+                    font-family: 'Pacifico', cursive;
+                    font-size: 26px;
+                    color: #e7e7e7;
+                    text-shadow: 0px 1px 2px #f2f2f2;
+                }
             }
         }
     }
 }
 
+@keyframes wiki-fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

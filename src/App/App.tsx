@@ -9,6 +9,9 @@ class App extends React.Component {
                     <div id="xm-content">
                         <div className="xm-wiki" />
                         <div className="xm-active" />
+                        <div className="xm-logo">
+                            <span id="xm-logo-font">Xiyou Mobile</span>
+                        </div>
                     </div>
                 </div>
             </div>
