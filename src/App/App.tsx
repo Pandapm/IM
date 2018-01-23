@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Test from '../components/Test';
+import Wiki from '../components/wiki';
 import './style.less';
 
 class App extends React.Component {
@@ -14,13 +14,10 @@ class App extends React.Component {
         };
         
         const appPage: Array<IRoute> = [
-            {
-                link: '/',
-                component: Test,
-            },
+            
             {
                 link: '/wiki',
-                component: Test,
+                component: Wiki,
             }
         ];
         return (
