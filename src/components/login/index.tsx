@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './style.less';
+const test = require('./rrr.png');
 
 class Login extends React.Component {
     render() {
@@ -13,7 +14,22 @@ class Login extends React.Component {
                     }
                 </ul>
                 <div className="login-frame">
-                    <h3>login</h3>
+                    <h3>Xiyou Mobile</h3>
+                    <div className="login-input login-user">
+                        <i className="fa fw fa-user-circle-o"/>
+                        <input type="text" placeholder="Username" />
+                    </div>
+                    <div className="login-input login-user">
+                        <i className="fa fw fa-key"/>
+                        <input type="password" placeholder="Password" />
+                    </div>
+                    <div className="login-verify">
+                        <img src={test} />
+                        <input />
+                    </div>
+                    <div className="login-btn">
+                        Get Start
+                    </div>
                 </div>
             </div>
         );
