@@ -5,10 +5,10 @@ let mainWin;
 
 function createWin() {
     var mainWin = new BrowserWindow({
-        width: 800,
-        height: 600,
-        minHeight: 450,
-        minWidth: 600,
+        height: 680,
+        width: 1100,
+        minHeight: 680,
+        minWidth: 1100,
         title: '你猜',
         show: false,
     });
