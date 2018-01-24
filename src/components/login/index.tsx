@@ -1,6 +1,6 @@
 import * as React from 'react';
-import test from '../';
 import './style.less';
+const test = require('./rrr.png');
 
 class Login extends React.Component {
     render() {
