@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-// import Wiki from './components/menuList';
+import MenuList from './components/menuList';
 import Login from './components/login';
 
 class App extends React.Component {
@@ -14,10 +14,13 @@ class App extends React.Component {
         };
         
         const appPage: Array<IRoute> = [
-            
             {
                 link: '/',
                 component: Login,
+            },
+            {
+                link: '/menu',
+                component: MenuList,
             }
         ];
         return (
