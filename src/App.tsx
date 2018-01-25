@@ -15,7 +15,7 @@ class App extends React.Component {
         
         const appPage: Array<IRoute> = [
             {
-                link: '/',
+                link: '/index',
                 component: Login,
             },
             {

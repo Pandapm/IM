@@ -3,9 +3,9 @@ type XMenu = {
     label: string,
     link: string,
 };
-const menuList: Array<XMenu> = [
+export const menuList: Array<XMenu> = [
     {
-        icon: 'fa fa-fw fa-comments',
+        icon: 'fa fa-fw fa-comments-o',
         label: 'IM',
         link: '/chat',
     },
@@ -33,12 +33,23 @@ const menuList: Array<XMenu> = [
         icon: 'fa fa-fw fa-users',
         label: '关于我们',
         link: '/about',
-    },
-    {
-        icon: 'fa fa-fw fa-bug',
-        label: 'Bug反馈',
-        link: '/feedBack',
     }
 ];
 
-export default menuList;
+export const menuFeature: Array<XMenu> = [
+    {
+        icon: 'fa fa-fw fa-file-text',
+        label: '我的wiki',
+        link: '/manager/wiki',
+    },
+    {
+        icon: 'fa fa-fw fa-cogs',
+        label: '动态管理',
+        link: '/manager/active',
+    },
+    {
+        icon: 'fa fa-fw fa-cloud-upload',
+        label: '应用上传',
+        link: '/manager/application',
+    }
+];
