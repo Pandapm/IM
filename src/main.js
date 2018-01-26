@@ -17,7 +17,7 @@ function createWin() {
         mainWin.show();
     });
     if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {
-        mainWin.loadURL('http://localhost:3000');
+        mainWin.loadURL('http://localhost:3000/menu');
         mainWin.webContents.openDevTools();
     } else {
         mainWin.loadURL(`file://${path.resolve(__dirname, '../build/index.html')}`);
