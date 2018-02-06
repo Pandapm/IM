@@ -6,12 +6,12 @@ type XMenu = {
 export const menuList: Array<XMenu> = [
     {
         icon: 'fa fa-fw fa-comments-o',
-        label: 'IM',
+        label: 'IM聊天',
         link: '/chat',
     },
     {
-        icon: 'fa fa-fw fa-file-code-o',
-        label: 'wiki',
+        icon: 'fa fa-fw fa-file',
+        label: 'WIKI信息',
         link: '/wiki',
     },
     {

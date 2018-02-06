@@ -1,10 +1,12 @@
 @endColor: #E3A7FF;
+@transitionAll: all 0.2s ease-in-out;
 
 .menu-wrapper {
     .menu-aside {
         width: 4.5%;
         min-width: 70px;
         float: left;
+        height: 40px;
         background: #000;
         text-align: center;
         height: 100vh;
@@ -13,6 +15,14 @@
         &:hover {
             width: 16.7%;
             transition: all 0.3s ease-in-out;
+
+            #menu-info {
+                position: absolute;
+                opacity: 1;
+                color: #fff;
+                margin-left: 6px;
+                animation: test 0.2s ease-in-out;
+            }
         }
 
         .menu-aside-header {
@@ -51,9 +61,17 @@
                 cursor: pointer;
 
                 > a {
+                    width: 100%;
+                    position: relative;
+
                     > i {
                         font-size: 18px;
                         color: @endColor;
+                    }
+
+                    #menu-info {
+                        position: absolute;
+                        opacity: 0;
                     }
                 }
 
@@ -86,6 +104,18 @@
 
     .menu-content {
         overflow: hidden;
-        color: #fff;
+        color: #000;
+    }
+}
+
+@keyframes test {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }
