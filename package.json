@@ -48,6 +48,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "test:coverage": "node scripts/test.js --env=jsdom --coverage",
     "dev": "cross-env NODE_ENV=development nodemon --watch out --exec  './node_modules/.bin/electron' ./src/main.js"
   },
   "devDependencies": {
