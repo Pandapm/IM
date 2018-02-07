@@ -17,7 +17,7 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 
 > 启动渲染线程开发 `npm run start`
 
-**每个组件都必须通过测试**
+**每个组件都必须通过测试, 且保证覆盖率>=90%**
 
 3. 启动 `jest` 单元测试
 
