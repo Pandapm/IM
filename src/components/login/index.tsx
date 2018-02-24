@@ -10,11 +10,21 @@ class Login extends React.Component<{}, any> {
             showQrcode: false,
         };
         this.openQrcode = this.openQrcode.bind(this);
+        this.handleKeyLogin = this.handleKeyLogin.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
     }
     openQrcode() {
         this.setState({
             showQrcode: !this.state.showQrcode
         });
+    }
+    handleKeyLogin(e: any) {
+        if (e.keyCode === 13) {
+            alert('alert');
+        }
+    }
+    handleLogin() {
+        alert('alert');
     }
     render() {
         return (
@@ -46,10 +56,18 @@ class Login extends React.Component<{}, any> {
                         </div>
                         <div className="login-verify">
                             <img src={test} />
-                            <input type="text" placeholder="verfication code"/>
+                            <input
+                                type="text"
+                                placeholder="verfication code"
+                                onKeyDown={e => this.handleKeyLogin(e)}
+                            />
                         </div>
-                        <div className="login-btn">
-                            Get Start
+                        <div>test</div>
+                        <div
+                            className="login-btn"
+                            onClick={this.handleLogin}
+                        >
+                            Get Start!
                         </div>
                     </div>
                     {
