@@ -1,9 +1,11 @@
 @endColor: #E3A7FF;
+@opacityEnd: rgba(227, 167, 255, 0.5);
+@defaultColor: #574163;
 @transitionAll: all 0.2s ease-in-out;
 
 .menu-wrapper {
     .menu-aside {
-        width: 4.5%;
+        width: 14.5%;
         min-width: 70px;
         float: left;
         height: 40px;
@@ -11,19 +13,6 @@
         text-align: center;
         height: 100vh;
         transition: all 0.3s ease-in-out;
-
-        &:hover {
-            width: 16.7%;
-            transition: all 0.3s ease-in-out;
-
-            #menu-info {
-                position: absolute;
-                opacity: 1;
-                color: #fff;
-                margin-left: 6px;
-                animation: test 0.2s ease-in-out;
-            }
-        }
 
         .menu-aside-header {
             height: 7vh;
@@ -66,18 +55,24 @@
 
                     > i {
                         font-size: 18px;
-                        color: @endColor;
+                        color: @opacityEnd;
                     }
 
-                    #menu-info {
-                        position: absolute;
-                        opacity: 0;
+                    .menu-info {
+                        display: inline-block;
+                        margin-left: 12px;
+                        width: 54px;
+                        color: @opacityEnd;
                     }
                 }
 
                 &:hover {
                     > a {
                         > i {
+                            color: @endColor;
+                        }
+
+                        .menu-info {
                             color: #fff;
                         }
                     }
@@ -86,7 +81,12 @@
         }
 
         .menu-feature {
-            margin: 10vh 0 15vh;
+            margin: 5vh 0 15vh;
+            
+            &:before {
+                content: '相关工具栏';
+                color: rgba(255, 255, 255, 0.5);
+            }
         }
 
         .menu-aside-footer {
@@ -95,7 +95,7 @@
             > img {
                 width: 5wh;
                 height: 5vh;
-                border: 2px solid @endColor;
+                border: 2px solid @opacityEnd;
                 border-radius: 50%;
                 padding: 5px;
             }
@@ -105,17 +105,5 @@
     .menu-content {
         overflow: hidden;
         color: #000;
-    }
-}
-
-@keyframes test {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
     }
 }

@@ -17,12 +17,12 @@ describe('Login Component', () => {
         expect(wrapper.find('input').exists).toMatchSnapshot();
     });
     // case 2 判断点击事件是否可以触发
-    it('When the mouse was clicked, handleLogin() should be call', () => {
-        const mockClick = {
-            target: {
-                value: 'Test Clicked'
-            }
-        };
-        // expect(wrapper.find(''))
-    });
+    // it('When the mouse was clicked, handleLogin() should be call', () => {
+    //     const mockClick = {
+    //         target: {
+    //             value: 'Test Clicked'
+    //         }
+    //     };
+    //     // expect(wrapper.find(''))
+    // });
 });

@@ -19,7 +19,7 @@ class MenuList extends React.Component {
                                 <li className="menu-list" key={index}>
                                     <Link to={item.link}>
                                         <i className={item.icon} />
-                                        <span id="menu-info">{item.label}</span>
+                                        <span className="menu-info">{item.label}</span>
                                     </Link>
                                 </li>
                             ))
