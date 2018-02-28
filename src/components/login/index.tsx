@@ -39,19 +39,19 @@ class Login extends React.Component<{}, any> {
                 <div className="login-frame">
                     <div className="login-qrcode-info" onClick={this.openQrcode}>
                         {this.state.showQrcode ? 
-                            <i className="fa fa-border fa-fw fa-wpforms" aria-hidden="true" />
+                            <i className="icon icon-display" />
                             :
-                            <i className="fa fa-border fa-fw fa-qrcode" aria-hidden="true" />
+                            <i className="icon icon-qrcode" />
                         }
                     </div>
                     <div className={this.state.showQrcode ? 'login-content login-visible' : 'login-content'} >
                         <h3>Xiyou Mobile</h3>
                         <div className="login-input login-user">
-                            <i className="fa fa-fw fa-user-circle-o" aria-hidden="true"/>
+                            <i className="icon icon-user"/>
                             <input type="text" placeholder="Username" />
                         </div>
                         <div className="login-input login-user">
-                            <i className="fa fa-fw fa-key" aria-hidden="true"/>
+                            <i className="icon icon-key"/>
                             <input type="password" placeholder="Password" />
                         </div>
                         <div className="login-verify">

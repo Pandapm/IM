@@ -5,32 +5,32 @@ type XMenu = {
 };
 export const menuList: Array<XMenu> = [
     {
-        icon: 'fa fa-fw fa-comments-o',
+        icon: 'icon icon-bubbles3',
         label: 'IM聊天',
         link: '/chat',
     },
     {
-        icon: 'fa fa-fw fa-file',
+        icon: 'icon icon-file-text2',
         label: 'WIKI信息',
         link: '/wiki',
     },
     {
-        icon: 'fa fa-fw fa-coffee',
+        icon: 'icon icon-fire',
         label: '相关动态',
         link: '/active',
     },
     {
-        icon: 'fa fa-fw fa-code',
+        icon: 'icon icon-download2',
         label: '应用下载',
         link: '/download',
     },
     {
-        icon: 'fa fa-fw fa-university',
+        icon: ' icon icon-wink',
         label: '成员信息',
         link: '/member',
     },
     {
-        icon: 'fa fa-fw fa-users',
+        icon: 'icon icon-hipster',
         label: '关于我们',
         link: '/about',
     }
@@ -38,17 +38,17 @@ export const menuList: Array<XMenu> = [
 
 export const menuFeature: Array<XMenu> = [
     {
-        icon: 'fa fa-fw fa-file-text',
+        icon: 'icon icon-stack',
         label: '我的wiki',
         link: '/manager/wiki',
     },
     {
-        icon: 'fa fa-fw fa-cogs',
+        icon: 'icon icon-delicious',
         label: '动态管理',
         link: '/manager/active',
     },
     {
-        icon: 'fa fa-fw fa-cloud-upload',
+        icon: 'icon icon-upload2',
         label: '应用上传',
         link: '/manager/application',
     }
