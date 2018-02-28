@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { createHashHistory } from 'history';
 import './style.less';
 const test = require('./rrr.png');
 const qrcode = require('./eee.png');
@@ -24,7 +25,7 @@ class Login extends React.Component<{}, any> {
         }
     }
     handleLogin() {
-        alert('alert');
+        // this.props.history.push('/home');
     }
     render() {
         return (
@@ -62,7 +63,12 @@ class Login extends React.Component<{}, any> {
                                 onKeyDown={e => this.handleKeyLogin(e)}
                             />
                         </div>
-                        <div>test</div>
+                        <div className="login-oauth">
+                            <div className="login-oauth-icon">
+                                <span className="icon icon-github" />
+                            </div>
+                            <p>没有账号? 试试第三方登录吧</p>
+                        </div>
                         <div
                             className="login-btn"
                             onClick={this.handleLogin}

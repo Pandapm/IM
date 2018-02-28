@@ -42,11 +42,21 @@ export const menuFeature: Array<XMenu> = [
         label: '我的wiki',
         link: '/manager/wiki',
     },
-    {
-        icon: 'icon icon-delicious',
-        label: '动态管理',
-        link: '/manager/active',
-    },
+    // {
+    //     icon: 'icon icon-delicious',
+    //     label: '动态管理',
+    //     link: '/manager/active',
+    // },
+    // {
+    //     icon: 'icon icon-users',
+    //     label: '成员管理',
+    //     link: '/manager/users',
+    // },
+    // {
+    //     icon: 'icon icon-delicious',
+    //     label: '信息管理',
+    //     link: '/manager/info',
+    // },
     {
         icon: 'icon icon-upload2',
         label: '应用上传',

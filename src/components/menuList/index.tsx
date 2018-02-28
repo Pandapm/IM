@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { menuList, menuFeature } from './data';
 import './style.less';
@@ -11,16 +11,18 @@ class MenuList extends React.Component {
             <div className="menu-wrapper">
                 <div className="menu-aside">
                     <div className="menu-aside-header">
-                        <h3>Xiyou</h3>
+                        <NavLink to={'/menu'}>
+                            <h3>Xiyou</h3>
+                        </NavLink>
                     </div>
                     <ul className="menu-basic">
                         {
                             menuList.map((item, index) => (
                                 <li className="menu-list" key={index}>
-                                    <Link to={item.link}>
+                                    <NavLink to={item.link} activeClassName="cur">
                                         <i className={item.icon} />
                                         <span className="menu-info">{item.label}</span>
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             ))
                         }
@@ -29,9 +31,9 @@ class MenuList extends React.Component {
                         {
                             menuFeature.map((item, index) => (
                                 <li className="menu-list" key={index}>
-                                    <Link to={item.link}>
+                                    <NavLink to={item.link} activeClassName="cur">
                                         <i className={item.icon} />
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             ))
                         }
