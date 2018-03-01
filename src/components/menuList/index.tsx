@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { menuList, menuFeature } from './data';
+import { menuList, menuFeature, infoFeature } from './data';
+import Menu from './menu';
+
+import Home from '../Home/index';
 import './style.less';
 const logo = require('./favicon.png');
 
@@ -15,34 +18,25 @@ class MenuList extends React.Component {
                             <h3>Xiyou</h3>
                         </NavLink>
                     </div>
-                    <ul className="menu-basic">
-                        {
-                            menuList.map((item, index) => (
-                                <li className="menu-list" key={index}>
-                                    <NavLink to={item.link} activeClassName="cur">
-                                        <i className={item.icon} />
-                                        <span className="menu-info">{item.label}</span>
-                                    </NavLink>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                    <ul className="menu-feature">
-                        {
-                            menuFeature.map((item, index) => (
-                                <li className="menu-list" key={index}>
-                                    <NavLink to={item.link} activeClassName="cur">
-                                        <i className={item.icon} />
-                                    </NavLink>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    <Menu
+                        clsName={'menu-basic'}
+                        list={menuList}
+                    />
+                    <Menu
+                        clsName={'menu-feature'}
+                        list={menuFeature}
+                    />
+                    <Menu
+                        clsName={'info-feature'}
+                        list={infoFeature}
+                    />
                     <div className="menu-aside-footer">
                         <img src={logo} />
                     </div>
                 </div>
-                <div className="menu-content">content</div>
+                <div className="menu-content">
+                    <Home />
+                </div>
             </div>
         );
     }

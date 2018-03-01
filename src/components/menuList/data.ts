@@ -3,6 +3,7 @@ type XMenu = {
     label: string,
     link: string,
 };
+
 export const menuList: Array<XMenu> = [
     {
         icon: 'icon icon-bubbles3',
@@ -28,11 +29,6 @@ export const menuList: Array<XMenu> = [
         icon: ' icon icon-wink',
         label: '成员信息',
         link: '/member',
-    },
-    {
-        icon: 'icon icon-hipster',
-        label: '关于我们',
-        link: '/about',
     }
 ];
 
@@ -42,24 +38,27 @@ export const menuFeature: Array<XMenu> = [
         label: '我的wiki',
         link: '/manager/wiki',
     },
-    // {
-    //     icon: 'icon icon-delicious',
-    //     label: '动态管理',
-    //     link: '/manager/active',
-    // },
-    // {
-    //     icon: 'icon icon-users',
-    //     label: '成员管理',
-    //     link: '/manager/users',
-    // },
-    // {
-    //     icon: 'icon icon-delicious',
-    //     label: '信息管理',
-    //     link: '/manager/info',
-    // },
     {
         icon: 'icon icon-upload2',
         label: '应用上传',
         link: '/manager/application',
     }
+];
+
+export const infoFeature: Array<XMenu> = [
+    {
+        icon: 'icon icon-delicious',
+        label: '动态管理',
+        link: '/manager/active',
+    },
+    {
+        icon: 'icon icon-users',
+        label: '成员管理',
+        link: '/manager/users',
+    },
+    {
+        icon: 'icon icon-library',
+        label: '信息管理',
+        link: '/manager/info',
+    },
 ];

@@ -52,8 +52,8 @@
             }
         }
 
-        .menu-basic, .menu-feature {
-            margin-top: 20px;
+        .menu-basic, .menu-feature, .info-feature {
+            margin-top: 10px;
 
             .menu-list {
                 padding: 10px;
@@ -71,6 +71,7 @@
                     > i {
                         font-size: 18px;
                         color: @opacityEnd;
+                        transition: @transitionAll;
                     }
 
                     .menu-info {
@@ -79,6 +80,7 @@
                         width: 54px;
                         text-align: left;
                         color: @opacityEnd;
+                        transition: @transitionAll;
                     }
                 }
 
@@ -97,10 +99,19 @@
         }
 
         .menu-feature {
-            margin: 5vh 0 15vh;
+            margin: 5vh 0;
             
             &:before {
-                content: '相关工具栏';
+                content: '内容发布';
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .info-feature {
+            margin-bottom: 5vh;
+
+            &:before {
+                content: '信息管理';
                 color: rgba(255, 255, 255, 0.5);
             }
         }
