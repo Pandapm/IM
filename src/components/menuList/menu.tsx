@@ -1,3 +1,8 @@
+/**
+ * @author Yuan
+ * @description 右侧菜单栏组件
+ */
+
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
