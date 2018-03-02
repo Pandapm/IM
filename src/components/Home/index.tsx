@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import TopLeft from './modules/topLeft';
+import TopRight from './modules/topRight';
 import './style.less';
 
 class Home extends React.Component<{}, any> {
@@ -6,8 +9,12 @@ class Home extends React.Component<{}, any> {
         return (
             <div className="xy-home">
                 <div className="xy-home-top">
-                    <div className="xy-home-topleft">topleft</div>
-                    <div className="xy-home-topright">topright</div>
+                    <div className="xy-home-topleft">
+                        <TopLeft />
+                    </div>
+                    <div className="xy-home-topright">
+                        <TopRight />
+                    </div>
                 </div>
                 <div className="xy-home-search">
                     <span className="icon icon-ion-ios-search"/>
