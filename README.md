@@ -6,7 +6,7 @@
 >> 因为国内安装 `electron` 较慢，容易出现超时问题，建议添加国内镜像源，以淘宝源为例，
 
 ```
-npm config -edit
+npm config edit
 // 然后添加electron国内镜像源
 electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 ```
