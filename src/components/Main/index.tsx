@@ -13,18 +13,30 @@ const Main = () => (
         <Switch>
             <Route exact={true} path="/menu" component={Home} />
             {
-                menuList.map(item => (
-                    <Route path={item.link} component={Home} />
+                menuList.map((item, index) => (
+                    <Route
+                        key={`menu-${index}`}
+                        path={item.link}
+                        component={item.comp}
+                    />
                 ))
             }
             {
-                menuFeature.map(item => (
-                    <Route path={item.link} component={Home} />
+                menuFeature.map((item, index) => (
+                    <Route
+                        key={`feature-${index}`}
+                        path={item.link}
+                        component={item.comp}
+                    />
                 ))
             }
             {
-                infoFeature.map(item => (
-                    <Route path={item.link} component={Home} />
+                infoFeature.map((item, index) => (
+                    <Route
+                        key={`info-${index}`}
+                        path={item.link}
+                        component={item.comp}
+                    />
                 ))
             }          
         </Switch>
