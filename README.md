@@ -33,14 +33,14 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 
 ### 文件目录树
 
-`tree -I 'node_modules'`
+`tree -I 'node_modules|coverage|build' -C -L 3'`
 
 ```
 .
-├── README.md                                       // 设置文档
-├── config                                          // 项目配置
-│   ├── env.js                                      
-│   ├── jest                                        // jest 设置
+├── README.md
+├── config
+│   ├── env.js
+│   ├── jest
 │   │   ├── cssTransform.js
 │   │   ├── fileTransform.js
 │   │   └── typescriptTransform.js
@@ -50,11 +50,11 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   ├── webpack.config.dev.js
 │   ├── webpack.config.prod.js
 │   └── webpackDevServer.config.js
-├── doc.md                                          // 开发文档
+├── doc.md
 ├── nginx.conf
 ├── package-lock.json
 ├── package.json
-├── public                                          // 公共文件
+├── public
 │   ├── favicon.ico
 │   ├── fonts
 │   │   ├── icon.svg
@@ -63,46 +63,26 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   ├── icon.min.css
 │   ├── index.html
 │   └── manifest.json
-├── scripts                                         // 运行脚本
+├── scripts
 │   ├── build.js
 │   ├── start.js
 │   └── test.js
-├── src                                             // 组件
+├── src
 │   ├── App.tsx
 │   ├── common
 │   │   └── style.less
 │   ├── components
 │   │   ├── Home
-│   │   │   ├── index.tsx
-│   │   │   ├── modules
-│   │   │   │   ├── topLeft
-│   │   │   │   │   ├── index.tsx
-│   │   │   │   │   └── style.less
-│   │   │   │   └── topRight
-│   │   │   │       ├── index.tsx
-│   │   │   │       └── style.less
-│   │   │   └── style.less
 │   │   ├── login
-│   │   │   ├── eee.png
-│   │   │   ├── index.tsx
-│   │   │   ├── rrr.png
-│   │   │   └── style.less
 │   │   ├── menuList
-│   │   │   ├── data.ts
-│   │   │   ├── favicon.png
-│   │   │   ├── index.tsx
-│   │   │   ├── menu.tsx
-│   │   │   └── style.less
 │   │   └── wiki
-│   │       └── index.tsx
 │   ├── index.tsx
 │   ├── main.js
 │   └── registerServiceWorker.ts
-├── test                                            // 单例测试目录
+├── test
 │   └── __test__
 │       ├── App.test.tsx
 │       ├── __snapshots__
-│       │   └── Login.test.tsx.snap
 │       └── login.test.tsx
 ├── tsconfig.json
 ├── tsconfig.test.json
