@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.ts",
-  "homepage": ".",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.17.1",
