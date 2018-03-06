@@ -3,53 +3,67 @@ type XMenu = {
     label: string,
     link: string,
 };
+
 export const menuList: Array<XMenu> = [
     {
-        icon: 'fa fa-fw fa-comments-o',
-        label: 'IM',
+        icon: 'icon icon-bubbles3',
+        label: 'IM聊天',
         link: '/chat',
     },
     {
-        icon: 'fa fa-fw fa-file-code-o',
-        label: 'wiki',
+        icon: 'icon icon-file-text2',
+        label: 'WIKI信息',
         link: '/wiki',
     },
     {
-        icon: 'fa fa-fw fa-coffee',
+        icon: 'icon icon-fire',
         label: '相关动态',
         link: '/active',
     },
     {
-        icon: 'fa fa-fw fa-code',
+        icon: 'icon icon-download2',
         label: '应用下载',
         link: '/download',
     },
     {
-        icon: 'fa fa-fw fa-university',
+        icon: ' icon icon-wink',
         label: '成员信息',
         link: '/member',
-    },
-    {
-        icon: 'fa fa-fw fa-users',
-        label: '关于我们',
-        link: '/about',
     }
 ];
 
 export const menuFeature: Array<XMenu> = [
     {
-        icon: 'fa fa-fw fa-file-text',
+        icon: 'icon icon-stack',
         label: '我的wiki',
-        link: '/manager/wiki',
+        link: '/manage/wiki',
     },
     {
-        icon: 'fa fa-fw fa-cogs',
-        label: '动态管理',
-        link: '/manager/active',
-    },
-    {
-        icon: 'fa fa-fw fa-cloud-upload',
+        icon: 'icon icon-upload2',
         label: '应用上传',
-        link: '/manager/application',
+        link: '/manage/application',
+    }
+];
+
+export const infoFeature: Array<XMenu> = [
+    {
+        icon: 'icon icon-delicious',
+        label: '动态管理',
+        link: '/manage/active',
+    },
+    {
+        icon: 'icon icon-users',
+        label: '成员管理',
+        link: '/manage/users',
+    },
+    {
+        icon: 'icon icon-library',
+        label: '信息管理',
+        link: '/manage/info',
+    },
+    {
+        icon: 'icon icon-magic-wand',
+        label: '任务分发',
+        link: '/manage/plan'
     }
 ];
