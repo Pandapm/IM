@@ -30,3 +30,80 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 4. 打包程序
 
 > 待定
+
+### 文件目录树
+
+```
+.
+├── README.md
+├── config
+│   ├── env.js
+│   ├── jest
+│   │   ├── cssTransform.js
+│   │   ├── fileTransform.js
+│   │   └── typescriptTransform.js
+│   ├── paths.js
+│   ├── polyfills.js
+│   ├── setupTests.js
+│   ├── webpack.config.dev.js
+│   ├── webpack.config.prod.js
+│   └── webpackDevServer.config.js
+├── doc.md
+├── nginx.conf
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── fonts
+│   │   ├── icon.svg
+│   │   ├── icon.ttf
+│   │   └── icon.woff
+│   ├── icon.min.css
+│   ├── index.html
+│   └── manifest.json
+├── scripts
+│   ├── build.js
+│   ├── start.js
+│   └── test.js
+├── src
+│   ├── App.tsx
+│   ├── common
+│   │   └── style.less
+│   ├── components
+│   │   ├── Home
+│   │   │   ├── index.tsx
+│   │   │   ├── modules
+│   │   │   │   ├── topLeft
+│   │   │   │   │   ├── index.tsx
+│   │   │   │   │   └── style.less
+│   │   │   │   └── topRight
+│   │   │   │       ├── index.tsx
+│   │   │   │       └── style.less
+│   │   │   └── style.less
+│   │   ├── login
+│   │   │   ├── eee.png
+│   │   │   ├── index.tsx
+│   │   │   ├── rrr.png
+│   │   │   └── style.less
+│   │   ├── menuList
+│   │   │   ├── data.ts
+│   │   │   ├── favicon.png
+│   │   │   ├── index.tsx
+│   │   │   ├── menu.tsx
+│   │   │   └── style.less
+│   │   └── wiki
+│   │       └── index.tsx
+│   ├── index.tsx
+│   ├── main.js
+│   └── registerServiceWorker.ts
+├── test
+│   └── __test__
+│       ├── App.test.tsx
+│       ├── __snapshots__
+│       │   └── Login.test.tsx.snap
+│       └── login.test.tsx
+├── tsconfig.json
+├── tsconfig.test.json
+├── tslint.json
+└── yarn.lock
+```
