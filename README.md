@@ -33,7 +33,7 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 
 ### 文件目录树
 
-`tree -I 'node_modules|coverage|build'`
+`tree -I 'node_modules|coverage|build' -C -L 3'`
 
 ```
 .
@@ -73,28 +73,9 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   │   └── style.less
 │   ├── components
 │   │   ├── Home
-│   │   │   ├── index.tsx
-│   │   │   ├── modules
-│   │   │   │   ├── topLeft
-│   │   │   │   │   ├── index.tsx
-│   │   │   │   │   └── style.less
-│   │   │   │   └── topRight
-│   │   │   │       ├── index.tsx
-│   │   │   │       └── style.less
-│   │   │   └── style.less
 │   │   ├── login
-│   │   │   ├── eee.png
-│   │   │   ├── index.tsx
-│   │   │   ├── rrr.png
-│   │   │   └── style.less
 │   │   ├── menuList
-│   │   │   ├── data.ts
-│   │   │   ├── favicon.png
-│   │   │   ├── index.tsx
-│   │   │   ├── menu.tsx
-│   │   │   └── style.less
 │   │   └── wiki
-│   │       └── index.tsx
 │   ├── index.tsx
 │   ├── main.js
 │   └── registerServiceWorker.ts
@@ -102,7 +83,6 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   └── __test__
 │       ├── App.test.tsx
 │       ├── __snapshots__
-│       │   └── Login.test.tsx.snap
 │       └── login.test.tsx
 ├── tsconfig.json
 ├── tsconfig.test.json
