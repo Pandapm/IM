@@ -33,14 +33,14 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 
 ### 文件目录树
 
-`tree -I 'node_modules|coverage|build'`
+`tree -I 'node_modules'`
 
 ```
 .
-├── README.md
-├── config
-│   ├── env.js
-│   ├── jest
+├── README.md                                       // 设置文档
+├── config                                          // 项目配置
+│   ├── env.js                                      
+│   ├── jest                                        // jest 设置
 │   │   ├── cssTransform.js
 │   │   ├── fileTransform.js
 │   │   └── typescriptTransform.js
@@ -50,11 +50,11 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   ├── webpack.config.dev.js
 │   ├── webpack.config.prod.js
 │   └── webpackDevServer.config.js
-├── doc.md
+├── doc.md                                          // 开发文档
 ├── nginx.conf
 ├── package-lock.json
 ├── package.json
-├── public
+├── public                                          // 公共文件
 │   ├── favicon.ico
 │   ├── fonts
 │   │   ├── icon.svg
@@ -63,11 +63,11 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   ├── icon.min.css
 │   ├── index.html
 │   └── manifest.json
-├── scripts
+├── scripts                                         // 运行脚本
 │   ├── build.js
 │   ├── start.js
 │   └── test.js
-├── src
+├── src                                             // 组件
 │   ├── App.tsx
 │   ├── common
 │   │   └── style.less
@@ -98,7 +98,7 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   ├── index.tsx
 │   ├── main.js
 │   └── registerServiceWorker.ts
-├── test
+├── test                                            // 单例测试目录
 │   └── __test__
 │       ├── App.test.tsx
 │       ├── __snapshots__
