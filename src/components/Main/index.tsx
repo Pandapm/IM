@@ -11,34 +11,20 @@ import './style.less';
 const Main = () => (
     <div className="menu-content">
         <Switch>
-            <Route exact={true} path="/menu" component={Home} />
+            <Route
+                exact={true}
+                path="/menu"
+                component={Home}
+            />
             {
-                menuList.map((item, index) => (
+                menuList.concat(menuFeature, infoFeature).map((item, index) => (
                     <Route
                         key={`menu-${index}`}
                         path={item.link}
                         component={item.comp}
                     />
                 ))
-            }
-            {
-                menuFeature.map((item, index) => (
-                    <Route
-                        key={`feature-${index}`}
-                        path={item.link}
-                        component={item.comp}
-                    />
-                ))
-            }
-            {
-                infoFeature.map((item, index) => (
-                    <Route
-                        key={`info-${index}`}
-                        path={item.link}
-                        component={item.comp}
-                    />
-                ))
-            }          
+            }   
         </Switch>
     </div>
 );
