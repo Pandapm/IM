@@ -11,7 +11,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.10",
     "dotenv": "^5.0.1",
-    "electron": "^1.7.10",
+    "electron": "^1.7.11",
     "file-loader": "^1.1.11",
     "fork-ts-checker-webpack-plugin": "^0.4.0",
     "fs-extra": "^5.0.0",
