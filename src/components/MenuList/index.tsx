@@ -11,7 +11,7 @@ const MenuList = () => (
     <div className="menu-wrapper">
         <div className="menu-aside">
             <div className="menu-aside-header">
-                <NavLink to={'/menu'}>
+                <NavLink to={'/'}>
                     <h3>Xiyou</h3>
                 </NavLink>
             </div>

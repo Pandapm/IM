@@ -17,11 +17,6 @@ const Main = () => (
                 path="/"
                 component={Home}
             />
-            <Route
-                exact={true}
-                path="/menu"
-                component={Home}
-            />
             {
                 menuList.concat(menuFeature, infoFeature).map((item, index) => (
                     <Route
