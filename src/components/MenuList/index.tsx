@@ -27,9 +27,10 @@ const MenuList = () => (
                 clsName={'info-feature'}
                 list={infoFeature}
             />
-            <div className="menu-aside-footer">
+            <a className="menu-aside-footer">
                 <img src={logo} />
-            </div>
+                <p className="menu-aside-footer-name">杨远</p>
+            </a>
         </div>
         <Main />
     </div>
