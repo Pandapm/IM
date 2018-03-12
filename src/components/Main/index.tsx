@@ -6,6 +6,7 @@ import {
 
 import { menuList, menuFeature, infoFeature } from '../../common/data';
 import Home from '../Home';
+import NotFound from '../../common/404';
 import './style.less';
 
 const Main = () => (
@@ -13,7 +14,7 @@ const Main = () => (
         <Switch>
             <Route
                 exact={true}
-                path="/menu"
+                path="/"
                 component={Home}
             />
             {
@@ -24,7 +25,10 @@ const Main = () => (
                         component={item.comp}
                     />
                 ))
-            }   
+            }
+            <Route
+                component={NotFound}
+            />
         </Switch>
     </div>
 );

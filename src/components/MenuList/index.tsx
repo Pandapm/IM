@@ -11,7 +11,7 @@ const MenuList = () => (
     <div className="menu-wrapper">
         <div className="menu-aside">
             <div className="menu-aside-header">
-                <NavLink to={'/menu'}>
+                <NavLink to={'/'}>
                     <h3>Xiyou</h3>
                 </NavLink>
             </div>
@@ -27,9 +27,10 @@ const MenuList = () => (
                 clsName={'info-feature'}
                 list={infoFeature}
             />
-            <div className="menu-aside-footer">
+            <a className="menu-aside-footer">
                 <img src={logo} />
-            </div>
+                <p className="menu-aside-footer-name">杨远</p>
+            </a>
         </div>
         <Main />
     </div>

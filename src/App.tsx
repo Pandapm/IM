@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MenuList from './components/menuList';
+import MenuList from './components/MenuList';
 
 const App = () => {
     return <MenuList />;
