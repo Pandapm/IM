@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { createHashHistory } from 'history';
+
 import './style.less';
 const test = require('./rrr.png');
 const qrcode = require('./eee.png');
