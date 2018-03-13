@@ -48,7 +48,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "test:coverage": "node scripts/test.js --env=jsdom --coverage",
     "dev": "cross-env NODE_ENV=development nodemon --watch out --exec  './node_modules/.bin/electron' ./src/main.js",
-    "commit":"git-cz"
+    "commit": "git-cz"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.8",
@@ -75,9 +75,9 @@
   },
   "config": {
     "commitizen": {
-        "path": "node_modules/cz-conventional-changelog"
-      }
-    },
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}"
