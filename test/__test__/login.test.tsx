@@ -1,28 +1,16 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import Login from '../../src/components/login/index';
-
-const component = () => {
-    const wrapper = shallow(<Login />);
-
-    return {
-        wrapper,
-    };
-};
+import renderer from 'react-test-renderer';
+import Login from '../../src/components/Login/index';
 
 describe('Login Component', () => {
-    const { wrapper } = component();
     // case 1 判断组件是否正常渲染
     it('login Component should be render', () => {
-        expect(wrapper.find('input').exists).toMatchSnapshot();
+        const component = renderer.create(
+            <Login />
+        );
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
-    // case 2 判断点击事件是否可以触发
-    // it('When the mouse was clicked, handleLogin() should be call', () => {
-    //     const mockClick = {
-    //         target: {
-    //             value: 'Test Clicked'
-    //         }
-    //     };
-    //     // expect(wrapper.find(''))
-    // });
+
 });
