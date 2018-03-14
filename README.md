@@ -74,23 +74,16 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 │   ├── build.js
 │   ├── start.js
 │   └── test.js
-├── src
+├── src                                 // 组件
 │   ├── App.tsx
-│   ├── common
-│   │   └── style.less
-│   ├── components
-│   │   ├── Home
-│   │   ├── login
-│   │   ├── menuList
-│   │   └── wiki
+│   ├── common                          // 通用模块，各个组件通过`data.ts`引入
+│   ├── components                      // 组件模块，路由在`menulist`,组件调用在`main`
 │   ├── index.tsx
 │   ├── main.js
 │   └── registerServiceWorker.ts
-├── test
-│   └── __test__
-│       ├── App.test.tsx
-│       ├── __snapshots__
-│       └── login.test.tsx
+├── test                                // 测试
+│   └── __test__                        
+│       ├── __snapshots__               // 快照
 ├── tsconfig.json
 ├── tsconfig.test.json
 ├── tslint.json
