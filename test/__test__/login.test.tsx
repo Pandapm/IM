@@ -1,16 +1,21 @@
-import * as React from 'react';
-import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
-import Login from '../../src/components/Login/index';
+import { shallow, mount } from 'enzyme';
 
-describe('Login Component', () => {
-    // case 1 判断组件是否正常渲染
-    it('login Component should be render', () => {
-        const component = renderer.create(
-            <Login />
-        );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+import * as React from 'react';
+import * as ReactTestRenderer from 'react-test-renderer';
+
+import Login from '../../src/components/Login';
+
+describe('<Login /> --- Snapshot', () => {
+    it('Snapshot', () => {
+        const component = ReactTestRenderer.create(<Login />);
+        let snapshot = component.toJSON();
+        expect(snapshot).toMatchSnapshot();
     });
 
+    it('DOM', () => {
+        const component = mount(<Login />);
+        let res = component.find('button').simulate('click');
+        console.info(res);
+        // expect(res).toBe('alert1');
+    });
 });

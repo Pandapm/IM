@@ -40,7 +40,7 @@ electron_mirror = "http://npm.taobao.org/mirrors/electron/"
 
 ### 文件目录树
 
-`tree -I 'node_modules|coverage|build' -C -L 3'`
+`tree -I 'node_modules|coverage|build' -C -L 3`
 
 ```
 .
