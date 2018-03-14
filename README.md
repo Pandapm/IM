@@ -1,5 +1,12 @@
 ### Xiyoumobile desktop
 
+**代码提交步骤**
+**每一个文件做了更改都必须按照以下步骤来**
+
+> 1. `git add .`
+> 2. `git cz`
+> 3. 根据提示输入`commit`信息
+
 1. 安装依赖包
 
 > 使用`npm i` 或者 `yarn install`
