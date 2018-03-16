@@ -20,6 +20,7 @@ class Login extends React.Component<{}, any> {
         });
     }
     handleKeyLogin(e: any) {
+        // console.info(e);
         if (e.keyCode === 13) {
             alert('alert');
         }
