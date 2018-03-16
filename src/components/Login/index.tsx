@@ -25,7 +25,7 @@ class Login extends React.Component<{}, any> {
         }
     }
     handleLogin() {
-        // this.props.history.push('/home');
+        console.info('alert1');
     }
     render() {
         return (
@@ -69,12 +69,12 @@ class Login extends React.Component<{}, any> {
                             </div>
                             <p>没有账号? 试试第三方登录吧</p>
                         </div>
-                        <div
+                        <button
                             className="login-btn"
                             onClick={this.handleLogin}
                         >
                             Get Start!
-                        </div>
+                        </button>
                     </div>
                     {
                         this.state.showQrcode ? <div className="login-qrcode">
