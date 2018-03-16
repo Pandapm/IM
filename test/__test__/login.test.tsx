@@ -1,4 +1,4 @@
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import * as React from 'react';
 import * as ReactTestRenderer from 'react-test-renderer';
@@ -11,11 +11,12 @@ describe('<Login /> --- Snapshot', () => {
         let snapshot = component.toJSON();
         expect(snapshot).toMatchSnapshot();
     });
+});
 
+describe('<Login /> --- Shallow React Render Components', () => {
     it('DOM', () => {
         const component = mount(<Login />);
-        let res = component.find('button').simulate('click');
-        console.info(res);
+        component.find('button').simulate('click');
         // expect(res).toBe('alert1');
     });
 });
