@@ -1,19 +1,22 @@
-.xy-home {
+@prefix-cls: xy-home;
+
+.@{prefix-cls} {
     font-size: 1.5rem;
     position: relative;
+    transition: all .2s ease-in-out;
 
-    .xy-home-top {
+    &-top {
         width: 100%;
         height: 33vh;
 
-        .xy-home-topleft {
+        &-left {
             float: left;
             width: 70%;
             height: 100%;
             background: rgba(0, 0, 0, 0.04);
         }
 
-        .xy-home-topright {
+        &-right {
             overflow: hidden;
             width: 30%;
             height: 100%;
@@ -21,7 +24,7 @@
         }
     }
 
-    .xy-home-search {
+    &-search {
         position: absolute;
         top: 28%;
         left: 6%;
@@ -41,7 +44,7 @@
         }
     }
 
-    .xy-home-bottom {
+    &-bottom {
         width: 100%;
         height: 67vh;
         background: #fff;

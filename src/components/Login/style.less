@@ -1,12 +1,13 @@
 @fadeIn: fadeIn 0.4s ease-in-out;
 @fadeOut: fadeOut 0.4s ease-in-out;
+@startColor: #C2BFFB;
 @endColor: #E3A7FF;
 
 .login-wrapper {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(-135deg, #C2BFFB 0%, @endColor 100%);
+    background-image: linear-gradient(-135deg, @startColor 0%, @endColor 100%);
     background-size: 100%;
 
     ul {
