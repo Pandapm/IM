@@ -6,21 +6,22 @@ import './style.less';
 
 class Home extends React.Component<{}, any> {
     render() {
+        const prefixCls = 'xy-home';
         return (
-            <div className="xy-home">
-                <div className="xy-home-top">
-                    <div className="xy-home-topleft">
+            <div className={`${prefixCls}`}>
+                <div className={`${prefixCls}-top`}>
+                    <div className={`${prefixCls}-top-left`}>
                         <TopLeft />
                     </div>
-                    <div className="xy-home-topright">
+                    <div className={`${prefixCls}-top-right`}>
                         <TopRight />
                     </div>
                 </div>
-                <div className="xy-home-search">
+                <div className={`${prefixCls}-search`}>
                     <span className="icon icon-ion-ios-search"/>
                 </div>
-                <div className="xy-home-bottom">
-                    <div className="xy-home-column">column</div>
+                <div className={`${prefixCls}-bottom`}>
+                    <div className={`${prefixCls}-column`}>column</div>
                 </div>
             </div>
         );

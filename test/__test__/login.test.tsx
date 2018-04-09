@@ -17,6 +17,5 @@ describe('<Login /> --- Shallow React Render Components', () => {
     it('DOM', () => {
         const component = mount(<Login />);
         component.find('button').simulate('click');
-        // expect(res).toBe('alert1');
     });
 });

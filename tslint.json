@@ -25,9 +25,17 @@
         "max-line-length": [ true, 120 ],
         "member-ordering": [
             true,
-            "public-before-private",
-            "static-before-instance",
-            "variables-before-functions"
+            {
+                "order": [
+                    "public-before-private",
+                    "static-before-instance",
+                    "variables-before-functions",
+                    "public-static-field",
+                    "protected-static-field",
+                    "public-static-method",
+                    "protected-static-method"
+                ]
+            }
         ],
         "no-any": false,
         "no-arg": true,
