@@ -78,6 +78,9 @@
       "path": "node_modules/cz-conventional-changelog"
     }
   },
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}"
