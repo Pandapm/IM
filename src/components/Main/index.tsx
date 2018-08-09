@@ -9,7 +9,7 @@ import Home from '../Home';
 import NotFound from '../../common/404';
 import './style.less';
 
-const prefixCls = 'menu-wrapper-content';
+const prefixCls = 'menu-content-router';
 
 const Main = () => (
     <div className={prefixCls}>
@@ -19,6 +19,11 @@ const Main = () => (
                 path="/"
                 component={Home}
             />
+            {/* <Route
+                exact={true}
+                path="/login"
+                component={Login}
+            /> */}
             {
                 menuList.concat(menuFeature, infoFeature).map((item, index) => (
                     <Route
