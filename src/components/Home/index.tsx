@@ -1,10 +1,11 @@
 import * as React from 'react';
 
-import TopLeft from './modules/topLeft';
-import TopRight from './modules/topRight';
+import TopLeft from './modules/TopLeft';
+import TopRight from './modules/TopRight';
+import BottomList from './modules/BottomList';
 import './style.less';
 
-class Home extends React.Component<{}, any> {
+class Home extends React.PureComponent<{}, any> {
     render() {
         const prefixCls = 'xy-home';
         return (
@@ -21,7 +22,7 @@ class Home extends React.Component<{}, any> {
                     <span className="icon icon-ion-ios-search"/>
                 </div>
                 <div className={`${prefixCls}-bottom`}>
-                    <div className={`${prefixCls}-column`}>column</div>
+                    <BottomList />
                 </div>
             </div>
         );
