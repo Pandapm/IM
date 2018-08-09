@@ -9,8 +9,10 @@ import Home from '../Home';
 import NotFound from '../../common/404';
 import './style.less';
 
+const prefixCls = 'menu-wrapper-content';
+
 const Main = () => (
-    <div className="menu-content">
+    <div className={prefixCls}>
         <Switch>
             <Route
                 exact={true}
