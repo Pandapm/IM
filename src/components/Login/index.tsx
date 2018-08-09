@@ -1,4 +1,5 @@
 import * as React from 'react';
+import LoginBackground from './modules/LoginBackground/index';
 
 import './style.less';
 const test = require('./rrr.png');
@@ -31,13 +32,7 @@ class Login extends React.Component<{}, any> {
         const prefixCls = 'login';
         return (
             <div className={`${prefixCls}-wrapper`}>
-                <ul>
-                    {
-                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
-                            <li key={index} className={`${prefixCls}-tri ${prefixCls}-tri-${item}`} /> 
-                        ))  
-                    }
-                </ul>
+                <LoginBackground />
                 <div className={`${prefixCls}-frame`}>
                     <div className={`${prefixCls}-qrcode-info`} onClick={this.openQrcode}>
                         {this.state.showQrcode ? 
