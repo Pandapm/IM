@@ -8,7 +8,15 @@ class BottomList extends React.PureComponent<{}, any> {
 
         return (
             <div className={`${prefixCls}-wrapper`}>
-                column
+                <div className={`${prefixCls}-bulletin`}>
+                    <h3>bottom-bulletin</h3>
+                </div>
+                <div className={`${prefixCls}-meetings`}>
+                    <h3>bottom-meetings</h3>
+                </div>
+                <div className={`${prefixCls}-approval`}>
+                    <h3>bottom-approval</h3>
+                </div>
             </div>
         );
     }
