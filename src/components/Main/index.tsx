@@ -6,17 +6,25 @@ import {
 
 import { menuList, menuFeature, infoFeature } from '../../common/data';
 import Home from '../Home';
+// import Login from '../Login';
 import NotFound from '../../common/404';
 import './style.less';
 
+const prefixCls = 'menu-content-router';
+
 const Main = () => (
-    <div className="menu-content">
+    <div className={prefixCls}>
         <Switch>
             <Route
                 exact={true}
                 path="/"
                 component={Home}
             />
+            {/* <Route
+                exact={true}
+                path="/login"
+                component={Login}
+            /> */}
             {
                 menuList.concat(menuFeature, infoFeature).map((item, index) => (
                     <Route

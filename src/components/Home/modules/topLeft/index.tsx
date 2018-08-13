@@ -5,7 +5,7 @@ import './style.less';
 const name = 'Yuan';
 
 export default function TopLeft() {
-    const prefixCls = 'topleft';
+    const prefixCls = 'topleft-pre';
     const timeLine = () => {
         if (new Date()) {
             console.info(new Date());
@@ -13,17 +13,17 @@ export default function TopLeft() {
     };
     timeLine();
     return (
-        <div className={`${prefixCls}-pre`}>
-            <div className={`${prefixCls}-pre-top`}>
+        <div className={`${prefixCls}`}>
+            <div className={`${prefixCls}-top`}>
                 <span>Monday</span>
                 <span>March 8</span>
             </div>
-            <div className={`${prefixCls}-pre-middle`}>
+            <div className={`${prefixCls}-middle`}>
                 Good Afternoon!
             </div>
-            <div className={`${prefixCls}-pre-bottom`}>
+            <div className={`${prefixCls}-bottom`}>
                 {`Hello ${name}! There is your `}
-                <div className={`${prefixCls}-pre-bottom-underline`}>
+                <div className={`${prefixCls}-bottom-underline`}>
                     schedule
                 </div>!
             </div>

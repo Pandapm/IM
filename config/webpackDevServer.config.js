@@ -85,7 +85,12 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    proxy: {
+      '/login/': {
+        target: 'https://github.com/',//设置你调用的接口域名和端口号 
+        changeOrigin: true,
+      }
+    },
     before(app) {
       // This lets us open files from the runtime error overlay.
       app.use(errorOverlayMiddleware());

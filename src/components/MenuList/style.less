@@ -2,11 +2,85 @@
 @opacityEnd: rgba(227, 167, 255, 0.5);
 @defaultColor: #574163;
 @transitionAll: all 0.2s ease-in-out;
+@prefix-cls: menu-wrapper;
 
-.menu-wrapper {
+.@{prefix-cls} {
     font-size: 1.5rem;
 
-    .menu-aside {
+    .menu-basic {
+        margin-top: 10px;
+
+        .menu-list {
+            font-size: 14px;
+            padding: 8px;
+            cursor: pointer;
+
+            .cur {
+                color: @endColor;
+            }
+
+            > a {
+                width: 100%;
+                text-decoration: none;
+                position: relative;
+
+                > i {
+                    font-size: 2rem;
+                    color: @opacityEnd;
+                    transition: @transitionAll;
+                }
+
+                .menu-info {
+                    margin-left: 12px;
+                    width: 54px;
+                    text-align: left;
+                    color: @opacityEnd;
+                    transition: @transitionAll;
+                }
+            }
+
+            &:hover {
+                > a {
+                    > i {
+                        color: @endColor;
+                    }
+
+                    .menu-info {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        
+        &-basic {
+            .menu-basic();
+        }
+
+        &-feature {
+            .menu-basic();
+            margin: 3vh 0;
+
+            &:before {
+                content: '内容发布';
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        &-info {
+            .menu-basic();
+            margin-bottom: 5vh;
+
+            &:before {
+                content: '信息管理';
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    &-aside {
         width: 14.5%;
         min-width: 70px;
         float: left;
@@ -16,132 +90,47 @@
         height: 100vh;
         transition: all 0.3s ease-in-out;
 
-        .menu-aside-header {
+        &-header {
             height: 7vh;
-            min-height: 4rem;
+            line-height: 7vh;
             background-image: linear-gradient(-135deg, #C2BFFB 0%, @endColor 100%);
-
-            &::before, &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 68px;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 60px 0 0 60px;
-                border-color: transparent transparent transparent rgba(0, 0, 0, 0.03);
-            }
-
-            &::before {
-                left: 0 !important;
-            }
-
-            &::after {
-                left: 9%;
-                transform: rotate(-90deg);
-            }
-
+    
             > a {
                 > h3 {
                     font-family: 'Pacifico', cursive;
                     font-size: 3rem;
                     color: #fff;
                 }
-
+    
                 &:hover {
                     text-decoration: none;
                 }
             }
         }
+    }
 
-        .menu-basic, .menu-feature, .info-feature {
-            margin-top: 10px;
+    &-footer {
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
 
-            .menu-list {
-                padding: 8px;
-                cursor: pointer;
+        > img {
+            width: 3.5rem;
+            height: 3.5rem;
+            border: 2px solid @opacityEnd;
+            border-radius: 50%;
+            padding: 0.42rem;
+            transition: @transitionAll;
 
-                .cur {
-                    color: @endColor;
-                }
-
-                > a {
-                    width: 100%;
-                    text-decoration: none;
-                    position: relative;
-
-                    > i {
-                        font-size: 2rem;
-                        color: @opacityEnd;
-                        transition: @transitionAll;
-                    }
-
-                    .menu-info {
-                        display: inline-block;
-                        margin-left: 12px;
-                        width: 54px;
-                        text-align: left;
-                        color: @opacityEnd;
-                        transition: @transitionAll;
-                    }
-                }
-
-                &:hover {
-                    > a {
-                        > i {
-                            color: @endColor;
-                        }
-
-                        .menu-info {
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-        }
-
-        .menu-feature {
-            margin: 3vh 0;
-
-            &:before {
-                content: '内容发布';
-                color: rgba(255, 255, 255, 0.5);
-            }
-        }
-
-        .info-feature {
-            margin-bottom: 5vh;
-
-            &:before {
-                content: '信息管理';
-                color: rgba(255, 255, 255, 0.5);
-            }
-        }
-
-        .menu-aside-footer {
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-
-            > img {
-                width: 3.5rem;
-                height: 3.5rem;
-                border: 2px solid @opacityEnd;
-                border-radius: 50%;
-                padding: 0.42rem;
+            &:hover {
+                border-color: @endColor;
                 transition: @transitionAll;
-
-                &:hover {
-                    border-color: @endColor;
-                    transition: @transitionAll;
-                }
-            }
-
-            .menu-aside-footer-name {
-                margin-top: 0.25rem;
-                color: rgba(255, 255, 255, 0.9);
             }
         }
+    }
+
+    &-footer-name {
+        margin-top: 0.25rem;
+        color: rgba(255, 255, 255, 0.9);
     }
 }

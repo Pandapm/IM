@@ -7,7 +7,7 @@ import './style.less';
 
 class Home extends React.PureComponent<{}, any> {
     render() {
-        const prefixCls = 'xy-home';
+        const prefixCls = 'x-home';
         return (
             <div className={`${prefixCls}`}>
                 <div className={`${prefixCls}-top`}>

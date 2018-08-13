@@ -1,4 +1,6 @@
 import * as React from 'react';
+import oAuthLogin from '../../utils/oAuth';
+import LoginBackground from './modules/LoginBackground/index';
 
 import './style.less';
 const test = require('./rrr.png');
@@ -11,13 +13,18 @@ class Login extends React.Component<{}, any> {
             showQrcode: false,
         };
         this.openQrcode = this.openQrcode.bind(this);
-        this.handleKeyLogin = this.handleKeyLogin.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
+        this.handleKeyLogin = this.handleKeyLogin.bind(this);
+        this.handleOauthLogin = this.handleOauthLogin.bind(this);
     }
     openQrcode() {
         this.setState({
             showQrcode: !this.state.showQrcode
         });
+    }
+    handleOauthLogin() {
+        console.info('sdf');
+        oAuthLogin();
     }
     handleKeyLogin(e: any) {
         if (e.keyCode === 13) {
@@ -31,13 +38,7 @@ class Login extends React.Component<{}, any> {
         const prefixCls = 'login';
         return (
             <div className={`${prefixCls}-wrapper`}>
-                <ul>
-                    {
-                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
-                            <li key={index} className={`${prefixCls}-tri ${prefixCls}-tri-${item}`} /> 
-                        ))  
-                    }
-                </ul>
+                <LoginBackground />
                 <div className={`${prefixCls}-frame`}>
                     <div className={`${prefixCls}-qrcode-info`} onClick={this.openQrcode}>
                         {this.state.showQrcode ? 
@@ -68,7 +69,7 @@ class Login extends React.Component<{}, any> {
                                 onKeyDown={e => this.handleKeyLogin(e)}
                             />
                         </div>
-                        <div className={`${prefixCls}-oauth`}>
+                        <div className={`${prefixCls}-oauth`} onClick={this.handleOauthLogin}>
                             <div className={`${prefixCls}-oauth-icon`}>
                                 <span className="icon icon-github" />
                             </div>
