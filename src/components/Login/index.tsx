@@ -66,6 +66,7 @@ class Login extends React.Component<{}, any> {
                             <input
                                 type="text"
                                 placeholder="verfication code"
+                                autoComplete="false"
                                 onKeyDown={e => this.handleKeyLogin(e)}
                             />
                         </div>

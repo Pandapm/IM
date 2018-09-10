@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { Canceler } from 'axios';
 import baseConfig from './baseConfig';
 
 let pending: Array<{
@@ -24,8 +24,11 @@ const Service = axios.create(baseConfig);
 Service.interceptors.request.use(
     req => {
         removePending(req);
-        baseConfig.cancelToken = new axios.CancelToken((c) => {
-            pending.push({ url: baseConfig.url + '&request_type=' + baseConfig.method, cancel: c });
+        baseConfig.cancelToken = new axios.CancelToken((cancel: Canceler) => {
+            pending.push({
+                url: baseConfig.url + '&request_type=' + baseConfig.method,
+                cancel: cancel,
+            });
         });
         return baseConfig;
     },
