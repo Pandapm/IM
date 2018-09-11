@@ -4,43 +4,44 @@
   "private": true,
   "main": "main.ts",
   "dependencies": {
-    "autoprefixer": "^8.1.0",
+    "autoprefixer": "^9.1.5",
     "axios": "^0.18.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "chalk": "^2.4.1",
     "classnames": "^2.2.6",
-    "css-loader": "^0.28.10",
-    "dotenv": "^5.0.1",
-    "electron": "^1.7.11",
-    "file-loader": "^1.1.11",
-    "fork-ts-checker-webpack-plugin": "^0.4.0",
-    "fs-extra": "^5.0.0",
+    "css-loader": "^1.0.0",
+    "dotenv": "^6.0.0",
+    "electron": "^2.0.9",
+    "file-loader": "^2.0.0",
+    "fork-ts-checker-webpack-plugin": "^0.4.9",
+    "fs-extra": "^7.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^22.4.2",
+    "jest": "^23.6.0",
     "object-assign": "4.1.1",
-    "postcss-flexbugs-fixes": "^3.3.0",
-    "postcss-loader": "^2.1.1",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
     "promise": "8.0.1",
     "raf": "3.4.0",
-    "react": "^16.4.2",
-    "react-dev-utils": "^5.0.1",
-    "react-dom": "^16.4.2",
+    "react": "^16.5.0",
+    "react-dev-utils": "^5.0.2",
+    "react-dom": "^16.5.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "^2.4.0",
-    "source-map-loader": "^0.2.1",
-    "style-loader": "^0.20.2",
-    "sw-precache-webpack-plugin": "0.11.4",
-    "ts-jest": "^22.4.1",
-    "ts-loader": "^2.3.7",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.0",
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "ts-jest": "^23.1.4",
+    "ts-loader": "^3.5.0",
     "tslint": "^5.11.0",
     "tslint-loader": "^3.6.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.0.0",
-    "url-loader": "^1.0.1",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4",
-    "whatwg-fetch": "^2.0.4"
+    "typescript": "^3.0.3",
+    "url-loader": "^1.1.1",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4",
+    "webpack-manifest-plugin": "1.3.2",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -54,35 +55,34 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.1.13",
-    "@types/jest": "^22.2.0",
-    "@types/node": "^9.4.7",
-    "@types/react": "^16.4.8",
-    "@types/react-dom": "^16.0.7",
-    "@types/react-router": "^4.0.30",
-    "@types/react-router-dom": "^4.3.0",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "commitizen": "^2.10.1",
-    "cross-env": "^5.2.0",
-    "cz-conventional-changelog": "^2.1.0",
-    "electron-builder": "^20.27.1",
-    "electron-toolkit": "^1.0.24",
-    "enzyme": "^3.4.1",
-    "enzyme-adapter-react-16": "^1.2.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "less": "^2.3.1",
-    "less-loader": "^4.1.0",
-    "nodemon": "^1.18.3",
-    "react-loadable": "^5.4.0",
-    "react-test-renderer": "^16.4.2",
-    "ts-node": "^5.0.1",
-    "webpack-manifest-plugin": "^1.3.2",
-    "@storybook/react": "^3.4.10",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
     "@storybook/addons": "^3.4.10",
+    "@storybook/react": "^3.4.10",
+    "@types/enzyme": "^3.1.13",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.9.4",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-router": "^4.0.30",
+    "@types/react-router-dom": "^4.3.0",
     "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0"
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-runtime": "^6.26.0",
+    "commitizen": "^2.10.1",
+    "cross-env": "^5.2.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "electron-builder": "^20.28.4",
+    "electron-toolkit": "^1.0.24",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "nodemon": "^1.18.4",
+    "react-loadable": "^5.5.0",
+    "react-test-renderer": "^16.5.0",
+    "ts-node": "^7.0.1"
   },
   "config": {
     "commitizen": {
@@ -97,16 +97,16 @@
       "src/**/*.{js,jsx,ts,tsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js",
-      "<rootDir>/config/setupTests.js"
+      "<rootDir>/config/polyfills.js"
     ],
     "testMatch": [
-      "<rootDir>/test/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/test/**/?(*.)(spec|test).ts?(x)"
+      "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.tsx?$": "<rootDir>/config/jest/typescriptTransform.js",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
@@ -118,7 +118,6 @@
       "^react-native$": "react-native-web"
     },
     "moduleFileExtensions": [
-      "mjs",
       "web.ts",
       "ts",
       "web.tsx",
@@ -128,11 +127,12 @@
       "web.jsx",
       "jsx",
       "json",
-      "node"
+      "node",
+      "mjs"
     ],
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "/Users/admin/hello/tsconfig.test.json"
+        "tsConfigFile": "D:\\Code\\my-app\\tsconfig.test.json"
       }
     }
   },

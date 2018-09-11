@@ -1,10 +1,9 @@
 ### CI 定义stages
 language: node_js
+services: docker
+
 node_js:
-    - 9
-.tmp_docker: &task_defination
-    # images: none
-    # services:
+    - "lts/*"
 
 .tmp_artifacts:
     artifacts: &artifacts_definnation
@@ -36,7 +35,7 @@ build:prod_task:
 
 deploy:
     provider: release
-    
+
 
 cache:
     directories:
