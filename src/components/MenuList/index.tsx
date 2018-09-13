@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Menu from './menu';
+import MenuLink from './menu';
 import Main from '../Main';
 import { menuList, menuFeature, infoFeature } from '../../common/data';
 import './style.less';
 const logo = require('./favicon.png');
+
 const prefixCls = 'menu-wrapper'; 
 
 const MenuList = () => (
@@ -16,15 +17,15 @@ const MenuList = () => (
                     <h3>X-More</h3>
                 </NavLink>
             </div>
-            <Menu
+            <MenuLink
                 clsName={`${prefixCls}-content-basic`}
                 list={menuList}
             />
-            <Menu
+            <MenuLink
                 clsName={`${prefixCls}-content-feature`}
                 list={menuFeature}
             />
-            <Menu
+            <MenuLink
                 clsName={`${prefixCls}-content-info`}
                 list={infoFeature}
             />

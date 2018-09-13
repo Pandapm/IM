@@ -17,19 +17,19 @@ export interface Props {
     list: Array<XMenu>;
 }
 
-export default function Menu({ list, clsName }: Props) {
-    return (
-        <ul className={clsName}>
-            {
-                list.map((item, index) => (
-                    <li className="menu-list" key={index}>
-                        <NavLink to={item.link} activeClassName="cur">
-                            <i className={item.icon} />
-                            <span className="menu-info">{item.label}</span>
-                        </NavLink>
-                    </li>
-                ))
-            }
-        </ul>
-    );
-}
+const MenuLink = ({ list, clsName }: Props) => (
+    <ul className={clsName}>
+        {
+            list.map((item, index) => (
+                <li className="menu-list" key={index}>
+                    <NavLink to={item.link} activeClassName="cur">
+                        <i className={item.icon} />
+                        <span className="menu-info">{item.label}</span>
+                    </NavLink>
+                </li>
+            ))
+        }
+    </ul>
+);
+
+export default MenuLink;

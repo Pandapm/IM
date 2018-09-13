@@ -1,3 +1,6 @@
+/**
+ * @description axios请求拦截器
+ */
 import axios, { Canceler } from 'axios';
 import baseConfig from './baseConfig';
 

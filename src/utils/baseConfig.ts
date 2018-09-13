@@ -1,3 +1,6 @@
+/**
+ * @description axios基础配置
+ */
 import {
     AxiosRequestConfig,
     AxiosResponse,

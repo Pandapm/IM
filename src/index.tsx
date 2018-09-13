@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import './common/style.less';
 
 ReactDOM.render(
@@ -14,4 +14,4 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('root') as HTMLElement
 );
-// registerServiceWorker();
+registerServiceWorker();

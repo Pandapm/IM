@@ -6,7 +6,6 @@ import {
 
 import { menuList, menuFeature, infoFeature } from '../../common/data';
 import Home from '../Home';
-// import Login from '../Login';
 import NotFound from '../../common/404';
 import './style.less';
 
@@ -20,11 +19,6 @@ const Main = () => (
                 path="/"
                 component={Home}
             />
-            {/* <Route
-                exact={true}
-                path="/login"
-                component={Login}
-            /> */}
             {
                 menuList.concat(menuFeature, infoFeature).map((item, index) => (
                     <Route

@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-export default class Text extends React.Component {
+export default class WikiText extends React.Component {
     render() {
-        return <div>Hello</div>;
+        const prefixCls = 'wiki-text';
+        return <div className={prefixCls}>Hello</div>;
     }
 }
