@@ -1,10 +1,12 @@
+import { ComponentClass  } from 'react';
 import Login from '../components/Login';
+import Wiki from '../components/Wiki';
 
 type XMenu = {
     icon?: string,
     label: string,
     link: string,
-    comp: any,
+    comp: ComponentClass,
 };
 
 export const menuList: Array<XMenu> = [
@@ -12,31 +14,31 @@ export const menuList: Array<XMenu> = [
         icon: 'icon icon-bubbles3',
         label: 'IM聊天',
         link: '/chat',
-        comp: Login
+        comp: Login,
     },
     {
         icon: 'icon icon-file-text2',
         label: 'WIKI信息',
         link: '/wiki',
-        comp: Login
+        comp: Wiki,
     },
     {
         icon: 'icon icon-fire',
         label: '相关动态',
         link: '/active',
-        comp: Login
+        comp: Login,
     },
     {
         icon: 'icon icon-download2',
         label: '应用下载',
         link: '/download',
-        comp: Login
+        comp: Login,
     },
     {
         icon: ' icon icon-wink',
         label: '成员信息',
         link: '/member',
-        comp: Login
+        comp: Login,
     }
 ];
 
@@ -45,13 +47,13 @@ export const menuFeature: Array<XMenu> = [
         icon: 'icon icon-stack',
         label: '我的wiki',
         link: '/manage/wiki',
-        comp: Login
+        comp: Login,
     },
     {
         icon: 'icon icon-upload2',
         label: '应用上传',
         link: '/manage/application',
-        comp: Login
+        comp: Login,
     }
 ];
 

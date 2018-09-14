@@ -11,7 +11,7 @@ import './style.less';
 
 const prefixCls = 'menu-content-router';
 
-const Main = () => (
+const Main: React.SFC<{}> = () => (
     <div className={prefixCls}>
         <Switch>
             <Route

@@ -3,36 +3,34 @@ import oAuthLogin from '../../utils/oAuth';
 import LoginBackground from './modules/LoginBackground/index';
 
 import './style.less';
+const initialState = {
+    showQrcode: false,
+};
+type State = Readonly<typeof initialState>;
+
+const openQrcodeHandle = (prevState: State) => ({
+    showQrcode: !prevState.showQrcode,
+});
 const test = require('./rrr.png');
 const qrcode = require('./eee.png');
 
-class Login extends React.Component<{}, any> {
+class Login extends React.Component<{}, State> {
     constructor(props: any) {
         super(props);
-        this.state = {
-            showQrcode: false,
-        };
-        this.openQrcode = this.openQrcode.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
         this.handleKeyLogin = this.handleKeyLogin.bind(this);
         this.handleOauthLogin = this.handleOauthLogin.bind(this);
     }
-    openQrcode() {
-        this.setState({
-            showQrcode: !this.state.showQrcode
-        });
-    }
-    handleOauthLogin() {
-        console.info('sdf');
-        oAuthLogin();
-    }
-    handleKeyLogin(e: any) {
+    readonly state: State = initialState;
+    private openQrcode = () => this.setState(openQrcodeHandle);
+    private handleLogin = () => console.info('login');
+    private handleKeyLogin = (e: React.KeyboardEvent<HTMLElement>) => {
         if (e.keyCode === 13) {
             alert('alert');
         }
     }
-    handleLogin() {
-        console.info('alert1');
+    private handleOauthLogin = () => {
+        console.info('sdf');
+        oAuthLogin();
     }
     render() {
         const prefixCls = 'login';
