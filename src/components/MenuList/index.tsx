@@ -29,7 +29,7 @@ const MenuList = () => (
                 list={infoFeature}
             />
             <div className={`${prefixCls}-footer`}>
-                <p>杨远</p>
+                <p>test</p>
             </div>
         </div>
         <Main />

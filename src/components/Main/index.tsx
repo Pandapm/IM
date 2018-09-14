@@ -3,10 +3,10 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
-
-import { menuList, menuFeature, infoFeature } from '../../common/data';
 import Home from '../Home';
 import NotFound from '../../common/404';
+import { menuList, menuFeature, infoFeature } from '../../common/data';
+
 import './style.less';
 
 const prefixCls = 'menu-content-router';
