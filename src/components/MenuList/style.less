@@ -1,6 +1,5 @@
-@endColor: #E3A7FF;
-@opacityEnd: rgba(227, 167, 255, 0.5);
-@defaultColor: #574163;
+@defaultColor: #801dae;
+@bgColor: rgb(79, 21, 223);
 @transitionAll: all 0.2s ease-in-out;
 @prefix-cls: menu-wrapper;
 
@@ -8,15 +7,16 @@
     font-size: 1.5rem;
 
     .menu-basic {
-        margin-top: 10px;
+        text-align: left;
+        margin: 10px 2vw 0;
 
         .menu-list {
-            font-size: 14px;
+            font-size: 16px;
             padding: 8px;
             cursor: pointer;
 
             .cur {
-                color: @endColor;
+                color: @defaultColor;
             }
 
             > a {
@@ -26,7 +26,7 @@
 
                 > i {
                     font-size: 2rem;
-                    color: @opacityEnd;
+                    color: #75878a;
                     transition: @transitionAll;
                 }
 
@@ -34,7 +34,7 @@
                     margin-left: 12px;
                     width: 54px;
                     text-align: left;
-                    color: @opacityEnd;
+                    color: #6b6882;
                     transition: @transitionAll;
                 }
             }
@@ -42,11 +42,11 @@
             &:hover {
                 > a {
                     > i {
-                        color: @endColor;
+                        color: @bgColor;
                     }
 
                     .menu-info {
-                        color: #fff;
+                        color: @bgColor;
                     }
                 }
             }
@@ -61,7 +61,7 @@
 
         &-feature {
             .menu-basic();
-            margin: 3vh 0;
+            margin: 3vh 2vw;
 
             &:before {
                 content: '内容发布';
@@ -81,56 +81,50 @@
     }
 
     &-aside {
-        width: 14.5%;
-        min-width: 70px;
+        position: relative;
+        width: 12%;
+        min-width: 170px;
         float: left;
         height: 40px;
-        background: #000;
+        background: #f7fcfe;
         text-align: center;
         height: 100vh;
+        border-right: 1px solid #e9f1f6;
         transition: all 0.3s ease-in-out;
 
         &-header {
             height: 7vh;
             line-height: 7vh;
-            background-image: linear-gradient(-135deg, #C2BFFB 0%, @endColor 100%);
-    
+
             > a {
                 > h3 {
-                    font-family: 'Pacifico', cursive;
-                    font-size: 3rem;
-                    color: #fff;
+                    font-size: 30px;
+                    color: #3d3b4f;
                 }
-    
+
                 &:hover {
                     text-decoration: none;
+
+                    > h3 {
+                        color: @defaultColor;
+                    }
                 }
             }
         }
     }
 
     &-footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        margin-top: 0.25rem;
+        color: #f7fcfe;
         text-align: center;
         cursor: pointer;
-        text-decoration: none;
-
-        > img {
-            width: 3.5rem;
-            height: 3.5rem;
-            border: 2px solid @opacityEnd;
-            border-radius: 50%;
-            padding: 0.42rem;
-            transition: @transitionAll;
-
-            &:hover {
-                border-color: @endColor;
-                transition: @transitionAll;
-            }
-        }
-    }
-
-    &-footer-name {
-        margin-top: 0.25rem;
-        color: rgba(255, 255, 255, 0.9);
+        background: @bgColor;
     }
 }
