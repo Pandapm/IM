@@ -22,7 +22,7 @@ const MenuLink = ({ list, clsName }: Props) => (
         {
             list.map((item, index) => (
                 <li className="menu-list" key={index}>
-                    <NavLink to={item.link} activeClassName="cur">
+                    <NavLink to={item.link} activeStyle={{color: 'rgb(79, 21, 223)'}}>
                         <i className={item.icon} />
                         <span className="menu-info">{item.label}</span>
                     </NavLink>

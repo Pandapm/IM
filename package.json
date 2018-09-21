@@ -156,7 +156,7 @@
     "appId": "com.electron.hello",
     "copyright": "Copyright © 2018 guiqing",
     "productName": "hello",
-    "electronVersion": "1.8.3",
+    "electronVersion": "2.0.9",
     "asar": true,
     "directories": {
       "app": "/Users/admin/hello",

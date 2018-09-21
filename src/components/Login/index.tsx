@@ -34,30 +34,39 @@ class Login extends React.Component<{}, State> {
     }
     render() {
         const prefixCls = 'login';
+        const { showQrcode } = this.state;
         return (
             <div className={`${prefixCls}-wrapper`}>
                 <LoginBackground />
                 <div className={`${prefixCls}-frame`}>
                     <div className={`${prefixCls}-qrcode-info`} onClick={this.openQrcode}>
-                        {this.state.showQrcode ? 
+                        {showQrcode ? 
                             <i className="icon icon-display" />
                             :
                             <i className="icon icon-qrcode" />
                         }
                     </div>
-                    <div
-                        className={this.state.showQrcode
+                    <form
+                        className={showQrcode
                         ?
                         `${prefixCls}-content ${prefixCls}-visible` : `${prefixCls}-content`}
                     >
                         <h3>Xiyou Mobile</h3>
                         <div className={`${prefixCls}-input ${prefixCls}-user`}>
                             <i className="icon icon-user"/>
-                            <input type="text" placeholder="Username" />
+                            <input
+                                type="text"
+                                placeholder="Username"
+                                autoComplete="true"
+                            />
                         </div>
                         <div className={`${prefixCls}-input ${prefixCls}-user`}>
                             <i className="icon icon-key"/>
-                            <input type="password" placeholder="Password" />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                autoComplete="true"
+                            />
                         </div>
                         <div className={`${prefixCls}-verify`}>
                             <img src={test} />
@@ -80,9 +89,9 @@ class Login extends React.Component<{}, State> {
                         >
                             Get Start!
                         </button>
-                    </div>
+                    </form>
                     {
-                        this.state.showQrcode ? <div className={`${prefixCls}-qrcode`}>
+                        showQrcode ? <div className={`${prefixCls}-qrcode`}>
                             <img src={qrcode} />
                             <p>请打开手机端扫一扫</p>
                         </div> : null}
