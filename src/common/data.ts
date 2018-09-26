@@ -18,7 +18,7 @@ export const menuList: Array<XMenu> = [
     },
     {
         icon: 'icon icon-file-text2',
-        label: 'WIKI信息',
+        label: 'Wiki信息',
         link: '/wiki',
         comp: Wiki,
     },
